@@ -1,0 +1,10 @@
+---
+name: Feature request / enhancement
+about: Suggest an idea for this project
+title: ''
+labels: enhancement
+assignees: ''
+
+---
+
+**What would you like to see?**
