@@ -1,0 +1,17 @@
+name: salp
+version: '${version}'
+main: de.kel0002.salp.Main
+authors: [ KEL0002 ]
+website: https://modrinth.com/plugin/salp
+folia-supported: true
+api-version: '26.1.2'
+load: POSTWORLD
+permissions:
+  salp.access:
+    description: "Enables FULL read and write access to the servers file system"
+    default: op
+commands:
+  files:
+    permission: salp.access
+  salp:
+    permission: salp.access
