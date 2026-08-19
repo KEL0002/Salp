@@ -1,5 +1,6 @@
 package de.kel0002.salp;
 
+import de.kel0002.salp.advancedStuff.Metrics;
 import de.kel0002.salp.playerInteraction.Command;
 import de.kel0002.salp.playerInteraction.CommandTabCompleter;
 import de.kel0002.salp.playerInteraction.UpdateJoinListener;
@@ -22,6 +23,8 @@ public final class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        new Metrics(this, 33534);
+
         this.getCommand("files").setExecutor(new Command());
         this.getCommand("salp").setExecutor(new Command());
 
