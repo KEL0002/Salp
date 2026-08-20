@@ -9,6 +9,10 @@ import org.bukkit.entity.Player;
 import java.util.function.BiConsumer;
 
 public class DialogUtil {
+    public static String getBranding() {
+        return "<gradient:#51c7f7:#4e98e0:#4a57bf>Salp Filemanager:</gradient><gray> ";
+    }
+
     public static int width(Player player, int screenPercent){
         return (int) ((PlayerAttributeManager.getWidth(player)*0.8)*((double) screenPercent/100));
     }

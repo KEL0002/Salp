@@ -57,7 +57,7 @@ public class RenameDialog {
         String message = PlayerAttributeManager.getMessage(player);
 
         Dialog dialog = Dialog.create(builder -> builder.empty()
-                .base(DialogBase.builder(mn("Filemanager: Rename " + path))
+                .base(DialogBase.builder(mn(getBranding() + "Rename " + path))
                         .body(message == null ? List.of() : List.of(DialogBody.plainMessage(mn(message))))
                         .inputs(inputs)
                         .afterAction(DialogBase.DialogAfterAction.NONE)

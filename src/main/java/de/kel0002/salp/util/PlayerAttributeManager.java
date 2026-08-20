@@ -56,7 +56,7 @@ public class PlayerAttributeManager {
     }
     public static int getWidth(Player player) {
         Object value = playerAttributes.get(player, "screen_width");
-        return (value instanceof Integer number) ? Math.clamp(number, 32, 1080) : 1080;
+        return (value instanceof Integer number) ? Math.clamp(number, 64, 1080) : 1080;
     }
 
     public static void setMessage(Player player, String message) {

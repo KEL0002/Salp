@@ -21,8 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import static de.kel0002.salp.util.DialogUtil.getDialogAction;
-import static de.kel0002.salp.util.DialogUtil.width;
+import static de.kel0002.salp.util.DialogUtil.*;
 import static de.kel0002.salp.util.Util.*;
 import static de.kel0002.salp.util.Util.formatTime;
 
@@ -200,7 +199,7 @@ public class ModrinthDialog {
         String message = PlayerAttributeManager.getMessage(player);
 
         Dialog dialog = Dialog.create(builder -> builder.empty()
-                .base(DialogBase.builder(mn("Filemanager: Browsing Modrinth | " + getPageInfo()))
+                .base(DialogBase.builder(mn(getBranding() +  "Browsing Modrinth | " + getPageInfo()))
                         .body(message == null ? List.of() : List.of(DialogBody.plainMessage(mn(message))))
                         .inputs(inputs)
                         .afterAction(DialogBase.DialogAfterAction.NONE)

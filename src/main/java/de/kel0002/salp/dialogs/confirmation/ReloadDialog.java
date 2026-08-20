@@ -49,7 +49,7 @@ public class ReloadDialog {
         // ==========================
 
         Dialog dialog = Dialog.create(builder -> builder.empty()
-                .base(DialogBase.builder(mn("Filemanager: Reload " + path))
+                .base(DialogBase.builder(mn(getBranding() + "Reload " + path))
                         .body(body)
                         .afterAction(DialogBase.DialogAfterAction.NONE)
                         .pause(false)

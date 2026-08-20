@@ -22,10 +22,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import static de.kel0002.salp.util.DialogUtil.getDialogAction;
-import static de.kel0002.salp.util.DialogUtil.width;
+import static de.kel0002.salp.util.DialogUtil.*;
 import static de.kel0002.salp.util.FileUtil.*;
-import static de.kel0002.salp.util.Util.mn;
+import static de.kel0002.salp.util.Util.*;
 
 public class UploadDialog {
     KDialog superDialog;
@@ -71,7 +70,7 @@ public class UploadDialog {
 
 
         Dialog dialog = Dialog.create(builder -> builder.empty()
-                .base(DialogBase.builder(mn("Filemanager: Upload to " + path))
+                .base(DialogBase.builder(mn(getBranding() + "Upload to " + path))
                         .body(body)
                         .inputs(inputs)
                         .afterAction(DialogBase.DialogAfterAction.NONE)

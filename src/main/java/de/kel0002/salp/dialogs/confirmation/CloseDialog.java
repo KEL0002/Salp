@@ -51,7 +51,7 @@ public class CloseDialog {
         // ==========================
 
         Dialog dialog = Dialog.create(builder -> builder.empty()
-                .base(DialogBase.builder(mn("Filemanager: Close " + path))
+                .base(DialogBase.builder(mn(getBranding() + "Close " + path))
                         .body(body)
                         .afterAction(DialogBase.DialogAfterAction.NONE)
                         .pause(false)

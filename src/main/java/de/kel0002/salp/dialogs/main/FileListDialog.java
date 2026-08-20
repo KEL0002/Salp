@@ -261,7 +261,7 @@ public class FileListDialog extends KDialog {
         String message = PlayerAttributeManager.getMessage(player);
 
         Dialog dialog = Dialog.create(builder -> builder.empty()
-                .base(DialogBase.builder(mn("Filemanager: " + path))
+                .base(DialogBase.builder(mn(getBranding() + path))
                         .body(message == null ? List.of() : List.of(DialogBody.plainMessage(mn(message))))
                         .inputs(inputs)
                         .afterAction(DialogBase.DialogAfterAction.NONE)

@@ -71,7 +71,7 @@ public class DeleteDialog {
 
 
         Dialog dialog = Dialog.create(builder -> builder.empty()
-                .base(DialogBase.builder(mn("Filemanager: Delete " + path))
+                .base(DialogBase.builder(mn(getBranding() + "Delete " + path))
                         .body(body)
                         .inputs(inputs)
                         .afterAction(DialogBase.DialogAfterAction.NONE)

@@ -54,7 +54,7 @@ public class CreateDialog {
         String message = PlayerAttributeManager.getMessage(player);
 
         Dialog dialog = Dialog.create(builder -> builder.empty()
-                .base(DialogBase.builder(mn("Filemanager: Create file at " + path))
+                .base(DialogBase.builder(mn(getBranding() + "Create file at " + path))
                         .body(message == null ? List.of() : List.of(DialogBody.plainMessage(mn(message))))
                         .inputs(inputs)
                         .afterAction(DialogBase.DialogAfterAction.NONE)

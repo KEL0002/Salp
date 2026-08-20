@@ -163,7 +163,7 @@ public class TxtEditorDialog extends KDialog{
         // ==========================
 
         Dialog dialog = Dialog.create(builder -> builder.empty()
-                .base(DialogBase.builder(mn("Filemanager: " + path))
+                .base(DialogBase.builder(mn(getBranding() + path))
                         .body(body)
                         .inputs(inputs)
                         .afterAction(DialogBase.DialogAfterAction.NONE)
