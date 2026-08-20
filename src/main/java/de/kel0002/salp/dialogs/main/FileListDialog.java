@@ -278,7 +278,7 @@ public class FileListDialog extends KDialog {
 
     private ActionButton getInfoButton() {
         int width = getMainButtonWidth();
-        return ActionButton.builder(mn("Listing Files in " + path))
+        return ActionButton.builder(mn("<gradient:#1396f9:#7639f9>" + path))
                 .tooltip(mn("<bold>Sort:</bold><newline>" +
                         ("alphabetically_ff".equals(sort) ? "<bold>" : "") + "-> Alphabetically (<sprite:items:item/bundle>↑)<reset><newline>" +
                         ("alphabetically".equals(sort) ? "<bold>" : "") + "-> Alphabetically<reset><newline>" +
@@ -387,13 +387,13 @@ public class FileListDialog extends KDialog {
                             ))
                             .width(width(player, 4)).build();
                 } else {
-                    return ActionButton.builder(mn("\uD83D\uDD01"))
-                            .tooltip(mn("<bold>\uD83D\uDD01 Update Available!</bold><newline>"
+                    return ActionButton.builder(mn("<sprite:items:item/diamond_nautilus_armor>"))
+                            .tooltip(mn("<bold><sprite:items:item/diamond_nautilus_armor> Update Available!</bold><newline>"
                                     + "<bold>Name:</bold> " + mrInfo.get("name") + "<newline>"
                                     + "<bold><sprite:blocks:block/command_block_side> Version:</bold> " + mrInfo.get("current_version") + "<newline>"
-                                    + "<bold>\uD83D\uDD01 Version:</bold> " + mrInfo.get("newest_version") + "<newline>"
+                                    + "<bold><sprite:items:item/diamond_nautilus_armor> Version:</bold> " + mrInfo.get("newest_version") + "<newline>"
                                     + "<bold><sprite:blocks:block/command_block_side> Published:</bold> " + formatTime(FileTime.from(Instant.parse(mrInfo.get("current_date_published")))) + "<newline>"
-                                    + "<bold>\uD83D\uDD01 Published:</bold> " + formatTime(FileTime.from(Instant.parse(mrInfo.get("newest_date_published"))))))
+                                    + "<bold><sprite:items:item/diamond_nautilus_armor> Published:</bold> " + formatTime(FileTime.from(Instant.parse(mrInfo.get("newest_date_published"))))))
                             .width(width(player, 4))
                             .action(getDialogAction(() -> {
                                 PlayerAttributeManager.setMessage(player, "<color:green><hover:show_text:'The page will not refresh automatically'>Updating '" + mrInfo.get("name") + "' \uD83D\uDEC8");

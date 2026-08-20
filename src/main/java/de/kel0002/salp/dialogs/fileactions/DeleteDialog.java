@@ -42,7 +42,7 @@ public class DeleteDialog {
         this.path = path;
 
         required_confirmation = "DELETE " + getNameOnly(path);
-        confirmation_required = isUsedDir(path);
+        confirmation_required = isUsedDir(path) && !getParentPath(path).equals("/plugins/");
 
         openDialog();
     }

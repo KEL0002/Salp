@@ -45,15 +45,32 @@ public class Util {
     public static String getDisplayName(File file, Player player) {
         String displayname = file.getName();
         String search = PlayerAttributeManager.getSearch(player);
+
+        String path = FileUtil.getPath(file);
+        boolean isInClipboard = path.equals(PlayerAttributeManager.getClipboard(player));
+        boolean isDir = file.isDirectory();
+
+        if (!isDir && !isInClipboard) {
+            int lastD = displayname.lastIndexOf(".");
+            displayname = lastD == -1 ? displayname : displayname.substring(0, lastD) + "<color:#cecece>" + displayname.substring(lastD);
+        }
+
         if (!search.isEmpty()) {
             Pattern pattern = Pattern.compile(Pattern.quote(search), Pattern.CASE_INSENSITIVE);
             displayname = pattern.matcher(displayname).replaceAll("<color:aqua>$0</color>");
         }
 
-        String displaycolor = file.isDirectory() ? "<color:#fcc932>" : "";
-        String displayicon = file.isDirectory() ? "<sprite:items:item/bundle>" : "<sprite:items:item/filled_map>";
+        String displaycolor = isDir ? "<color:#fcc932>" : "";
+        String displayicon = "<sprite:items:item/bundle>";
 
-        if (FileUtil.getPath(file).equals(PlayerAttributeManager.getClipboard(player))) {
+
+        if (!isDir) displayicon = switch (path) {
+            case String x when x.endsWith(".jar") -> "<sprite:items:item/ghast_tear>";
+            case String x when x.endsWith(".config") || x.endsWith(".yml") || x.endsWith(".properties") -> "<sprite:items:item/comparator>";
+            default -> "<sprite:items:item/filled_map>";
+        };
+
+        if (isInClipboard) {
             displaycolor = PlayerAttributeManager.cut(player) ? "<color:red>" : "<color:green>"; }
 
         return displayicon + " " + displaycolor + displayname;

@@ -218,7 +218,7 @@ public class ModrinthDialog {
     }
 
     private ActionButton getInfoButton() {
-        return ActionButton.builder(mn("Listing Plugins | " + getPageInfo()))
+        return ActionButton.builder(mn("<gradient:#1396f9:#7639f9>" + getPageInfo()))
                 .tooltip(mn("<bold>Sort:</bold><newline>" +
                         ("relevance".equals(sort) ? "<bold>" : "") + "-> Relevance<reset><newline>" +
                         ("downloads".equals(sort) ? "<bold>" : "") + "-> Downloads<reset><newline>" +
