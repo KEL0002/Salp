@@ -31,3 +31,7 @@ jobs:
         run: | 
           shopt -s extglob
           gh release upload ${{ github.event.release.tag_name }} target/!(original-*).jar
+      - name: Upload to Modrinth
+        env:
+          MODRINTH_PAT: ${{ secrets.MODRINTH_PAT }}
+        run: python3 .github/workflows/publish_to_modrinth.py

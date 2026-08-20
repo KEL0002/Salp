@@ -8,7 +8,7 @@ github_id = 'KEL0002/Salp'
 
 def sync_readme():
     def get_readme() -> str:
-        return pathlib.Path('readme.md').read_text()
+        return pathlib.Path('README.md').read_text()
 
     def upload_readme(text):
         json = {
