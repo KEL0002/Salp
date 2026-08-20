@@ -98,7 +98,7 @@ public class ModrinthDialog {
                     page -= 1;
                     reOpen();
                 }))
-                .width(width(player, 2)).build());
+                .width(width(player, 3)).build());
 
         // Next Page
         buttons.add(ActionButton.builder(mn("→"))
@@ -110,7 +110,7 @@ public class ModrinthDialog {
                     page += 1;
                     reOpen();
                 }))
-                .width(width(player, 2)).build());
+                .width(width(player, 3)).build());
 
         // Close Dialog
         buttons.add(ActionButton.builder(mn("<sprite:gui:pending_invite/reject>"))
@@ -132,7 +132,7 @@ public class ModrinthDialog {
                             + "<newline><reset>" + project.getDescription()
                     ))
                     .action(getDialogAction((_, _) -> {}))
-                    .width(width(player, 88)).build()
+                    .width(width(player, 86)).build()
             );
 
             // Downloads
@@ -144,14 +144,14 @@ public class ModrinthDialog {
             // Author
             buttons.add(ActionButton.builder(mn("<head:" + project.getAuthor().replaceAll("[^A-Za-z0-9_]", "").replaceFirst("^(.{16}).*$", "$1") + ">"))
                     .tooltip(mn("<bold>Author:<reset> " + project.getAuthor()))
-                    .width(width(player, 2)).build());
+                    .width(width(player, 3)).build());
 
 
             // Updated
             buttons.add(ActionButton.builder(mn("\uD83D\uDD01"))
                     .tooltip(mn("<bold>Updated:<reset> " + formatTime(project.getUpdated())
                         + "<newline><bold>Created:<reset> " + formatTime(project.getCreated())))
-                    .width(width(player, 2)).build());
+                    .width(width(player, 3)).build());
             // Download
             String downloadIcon;
             String downloadTooltip;
@@ -231,7 +231,7 @@ public class ModrinthDialog {
                     page = 0;
                     reOpen();
                 }))
-                .width(width(player,88)).build();
+                .width(width(player,86)).build();
     }
 
     private String getPageInfo() {
