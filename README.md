@@ -1,19 +1,19 @@
 ![Salp](https://raw.githubusercontent.com/KEL0002/Salp/refs/heads/master/assets/title_spaced.png)
 
-### ⚠️ Big Security Warning - Read before install ⚠️
+## ⚠️ Big Security Warning - Read before install ⚠️
 >This plugin gives ALL server admins full control over your servers file system.
 This not only allows everyone with access to do things like **deleting the entire world and backups**,
 but also might allow them to **upload viruses** to the server.
 This plugin takes no action to protect against malicious behavior from admins. Install with caution!
 *(Access can be configured via the `salp.access` permission)*
 
-### Overview
+## Overview
 Salp is an admin tool allowing for easy plugin and configuration management, something that is usually only reserved for
 players with access to the server's console, most likely just the server owner.
 Salp aims to give this control to all the admins via a straightforward in game file manager.
 From there, you can easily install, update and configure plugins as well as other configuration files.
 
-### Showcase
+## Showcase
 Filemanager (Main menu when entering `/salp` or `/files`)
 ![Filemanager](https://raw.githubusercontent.com/KEL0002/Salp/refs/heads/master/assets/showcase/main.png)
 
@@ -48,14 +48,14 @@ Search results carry over into the text editor
 
 </details>
 
-### Upcoming features
+## Upcoming features
 - Downloading/Uploading files via a web-server
 - Opening logs/zip files
 - Datapack support
 - An easier-to-understand plugins ui
 - Terminal access
 
-### Links
+## Links
 - Modrinth: [modrinth.com/plugin/salp](https://modrinth.com/plugin/salp)
 - Source: [github.com/KEL0002/Salp](https://github.com/KEL0002/Salp)
 - Report Issues: [github.com/KEL0002/Salp/issues](https://github.com/KEL0002/Salp/issues)
