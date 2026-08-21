@@ -64,7 +64,7 @@ public class TxtEditorDialog extends KDialog{
             if (current_text == null) current_text = saved_text;
 
             // SIZE CHECK
-            if (current_text.replace(search, "§c" + search + "§r").getBytes(StandardCharsets.UTF_8).length > 65535) {
+            if ((search.isEmpty() ? current_text : current_text.replace(search, "§c" + search + "§r")).getBytes(StandardCharsets.UTF_8).length > 65535) {
                 PlayerAttributeManager.setMessage(player, "<color:red>Failed to open '" + getNameOnly(path) + "': " + "File is to large to be opened in game");
                 superDialog.init(getParentPath(path), player);
                 return;
