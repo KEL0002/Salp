@@ -45,6 +45,8 @@ public class Command implements CommandExecutor {
                 } else {
                     player.sendMessage(mn("<color:yellow>" + "'" + setting + "' is currently set to '" + Main.getPlayerAttributes().get(player, setting) + "'"));
                 }
+            } else {
+                FileUtil.open("", player);
             }
         } else if (args.length == 2) {
             if (args[0].startsWith("$")) {
