@@ -36,6 +36,8 @@ public final class Main extends JavaPlugin {
         modrinthIndexer = new ModrinthIndexer();
         modrinthPages = new ModrinthPages();
 
+        Bukkit.getAsyncScheduler().runNow(this, _ -> modrinthPages.getPage(0, "", "relevance"));
+
         playerAttributes.load(playerdataFile);
 
         Bukkit.getPluginManager().registerEvents(new UpdateJoinListener(), this);
