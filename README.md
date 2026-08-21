@@ -53,6 +53,7 @@ Search results carry over into the text editor
 - Opening logs/zip files
 - Datapack support
 - An easier-to-understand plugins ui
+- Terminal access
 
 ### Links
 - Modrinth: [modrinth.com/plugin/salp](https://modrinth.com/plugin/salp)
