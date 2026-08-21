@@ -352,12 +352,11 @@ public class FileListDialog extends KDialog {
                             playerAttributes.set(player, "clipboard", getPath(getFile(path).toPath().resolve(getNameOnly(clipboard)).toFile()));
                             playerAttributes.set(player, "cut", false);
 
-                            PlayerAttributeManager.setMessage(player, "<color:green>File moved!");
+                            PlayerAttributeManager.setMessage(player, "<color:green>File moved");
 
                         } else {
                             Files.copy(getFile(clipboard).toPath(), getFile(path).toPath().resolve(getNameOnly(clipboard)));
-
-                            PlayerAttributeManager.setMessage(player, "<color:green>File copied!");
+                            PlayerAttributeManager.setMessage(player, "<color:green>File pasted");
                         }
 
                         reOpen();
