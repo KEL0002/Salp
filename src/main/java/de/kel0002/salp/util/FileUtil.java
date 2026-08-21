@@ -14,7 +14,7 @@ import java.util.Arrays;
 
 public class FileUtil {
     public static File getFile(String path) {
-        return new File(Bukkit.getServer().getWorldContainer(), path);}
+        return new File(Bukkit.getServer().getWorldContainer(), path.replace("../", ""));}
 
     public static String getPath(File file) {
         return cleanPath(Bukkit.getServer().getWorldContainer().toPath().relativize(file.toPath()) + "");}
@@ -27,7 +27,7 @@ public class FileUtil {
         if (!path.startsWith("/")) path = "/" + path;
         if (path.endsWith("/")) path = path.substring(0, path.length() - 1);
         if (getFile(path).isDirectory()) path = path + "/";
-        return path;
+        return path.replace("../", "");
     }
 
     public static void open(String path, Player player) {
